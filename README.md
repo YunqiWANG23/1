@@ -18,6 +18,8 @@ Turn any ordinary room into a Halloween escape game, with no props and no setup.
 
 *Runs in the browser. Use Chrome and allow camera and microphone access.*
 
+🎬 **New here? [Watch the walkthrough video](guidance.mp4)** first to see how a game plays.
+
 <br/>
 
 Built in one day at the **Halloween Hackathon with Google DeepMind**, Imperial College London (31 October 2026).<br/>
@@ -29,6 +31,7 @@ Track 2: Multimodal & Human-Centric AI.
 
 ## 🎃 For judges: try it in 3 minutes
 
+0. *(Optional)* **[Watch the walkthrough video](guidance.mp4)** to see the full flow.
 1. **Open the [live demo](https://ai.studio/apps/adbd89f1-cf72-4101-b836-68a29c6cba52)** in Chrome and allow camera and microphone access.
 2. **Scan a room.** Upload a few photos of the room you're in, or pick one of the built-in sample rooms.
 3. **Watch the verification step.** Rule checks and three AI playtesters test every clue before the game is allowed to start. Load the **broken demo level** to see a broken game get caught, auto-fixed and re-checked.
