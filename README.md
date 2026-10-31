@@ -1,14 +1,45 @@
+<div align="center">
+
 # 👻 Roomgeist
 
 **Same room. Two realities. One escape.**
 
-Roomgeist turns any ordinary room into a Halloween escape game. You don't hide a single prop. Gemini reads the real room and imagines a haunted twin of it, where the clues live. A live AI ghost watches the real room through a webcam, where the answers live. To escape, players have to connect the two worlds.
+Turn any ordinary room into a Halloween escape game, with no props and no setup.
 
-> Built in one day at the **Halloween Hackathon with Google DeepMind** at Imperial College London (31 October 2026), Track 2: Multimodal & Human-Centric AI.
+<br/>
+
+<a href="https://ai.studio/apps/adbd89f1-cf72-4101-b836-68a29c6cba52">
+  <img src="https://img.shields.io/badge/▶%20%20PLAY%20ROOMGEIST%20NOW-ff6a00?style=for-the-badge&logoColor=white" alt="Play Roomgeist now" height="56"/>
+</a>
+
+<br/><br/>
+
+**👉 Live demo: https://ai.studio/apps/adbd89f1-cf72-4101-b836-68a29c6cba52**
+
+*Runs in the browser. Use Chrome and allow camera and microphone access.*
+
+<br/>
+
+Built in one day at the **Halloween Hackathon with Google DeepMind**, Imperial College London (31 October 2026).<br/>
+Track 2: Multimodal & Human-Centric AI.
+
+</div>
 
 ---
 
-## Table of contents
+## 🎃 For judges: try it in 3 minutes
+
+1. **Open the [live demo](https://ai.studio/apps/adbd89f1-cf72-4101-b836-68a29c6cba52)** in Chrome and allow camera and microphone access.
+2. **Scan a room.** Upload a few photos of the room you're in, or pick one of the built-in sample rooms.
+3. **Watch the verification step.** Rule checks and three AI playtesters test every clue before the game is allowed to start. Load the **broken demo level** to see a broken game get caught, auto-fixed and re-checked.
+4. **Approve and play.** Read a riddle in the haunted room, find the matching object in your real room, and hold it up to the webcam. The ghost reacts, and a digit of the door code appears.
+5. **Escape.** Say the four-digit code out loud to the ghost.
+
+> No API key needed to try it: the live demo above is already set up. If the camera misreads an object, use the **organiser override** to confirm it by hand.
+
+---
+
+## Contents
 
 - [The problem](#the-problem)
 - [Two superpowers](#two-superpowers)
@@ -18,7 +49,7 @@ Roomgeist turns any ordinary room into a Halloween escape game. You don't hide a
 - [Models used](#models-used)
 - [Project structure](#project-structure)
 - [API](#api)
-- [Getting started](#getting-started)
+- [Run it locally](#run-it-locally)
 - [Project status](#project-status)
 - [Roadmap](#roadmap)
 
@@ -28,32 +59,32 @@ Roomgeist turns any ordinary room into a Halloween escape game. You don't hide a
 
 Alex runs events for an international student society. Tonight she's hosting Halloween for **20 freshers who have never met**, in a **borrowed lecture theatre**, and their levels of English are very different.
 
-| Problem | Why normal options fail |
+| Problem | Why the usual options fail |
 |---|---|
-| **She can't touch the room** | No tape, no hidden props, no locks. The room must be returned exactly as she found it. |
+| **She can't change the room** | No tape, no hidden props, no locks. The room has to be returned exactly as she found it. |
 | **She has no budget** | A commercial escape room costs over £20 a head, and it's across town. |
-| **Party games leave people out** | Shy players and non-native speakers go quiet while a few loud people play. |
+| **Party games leave people out** | Shy players and non-native speakers go quiet while a few loud people take over. |
 
-So our puzzles are **easy on purpose**. Alex doesn't need a game that beats people. She needs one that **everyone can solve, so everyone starts talking.**
+So our puzzles are **easy on purpose**. Alex doesn't need a game that beats people. She needs one that **everyone can solve, so that everyone starts talking.**
 
 ---
 
 ## Two superpowers
 
-| | 🔮 Superpower 1: **Imagine** | 👁️ Superpower 2: **Perceive** |
+| | 🔮 **Imagine** | 👁️ **Perceive** |
 |---|---|---|
 | **What** | A haunted twin of your room | A live ghost that sees the real room |
 | **Models** | Gemini 4 Argon + Nano Banana 2.1 | Gemini 3.8 Live (camera + voice) |
 | **Role** | Reads the room and reimagines it as a Gothic haunted world. **The clues live here.** | Watches players hold up real objects and talks back in real time. **The answers live here.** |
 
-**Why virtual first, then real?**
+**Why imagine first, then perceive?**
 
 - **No props, no setup.** The answers are things already in the room, so nothing has to be hidden.
 - **The familiar becomes a mystery.** A red marker is just a marker until it becomes a *blood-stained quill*. Working out the link is the puzzle.
 - **Strangers have to talk.** One person explores the haunted world while everyone else searches the real room.
-- **Every find changes the world.** Each real object lifts a curse and reveals a digit of the escape code.
+- **Every find changes the game.** Each real object lifts a curse and reveals a digit of the escape code.
 
-> *Virtual exploration reveals real-world clues. Real-world discovery changes the virtual world.*
+> *The haunted room gives you the clues. The real room holds the answers.*
 
 ---
 
@@ -61,7 +92,7 @@ So our puzzles are **easy on purpose**. Alex doesn't need a game that beats peop
 
 ```mermaid
 flowchart LR
-    A[📸 Photos or video<br/>of a real room] --> B[🧠 Gemini 4 Argon<br/>object inventory]
+    A[📸 Photos of<br/>a real room] --> B[🧠 Gemini 4 Argon<br/>object inventory]
     B --> C[🛡️ Filter<br/>portable · safe · not personal]
     C --> D[🧩 Gemini 4 Argon<br/>puzzle design]
     D --> E[✅ Verification<br/>rules + AI playtesters]
@@ -72,25 +103,25 @@ flowchart LR
     H --> I[🔓 Escape]
 ```
 
-1. **Scan.** The organiser uploads a few photos (or one short video) of the room and fills in the event: players, teams, minutes and scare level.
-2. **Understand.** Gemini 4 Argon lists every visible object, with its colour, its position relative to a landmark, a bounding box, and whether it is portable, safe and shared.
-3. **Filter.** Personal belongings (bags, earbuds, someone's coffee), fixed equipment and unsafe items are excluded automatically. **We never ask players to touch other people's things.**
-4. **Design.** Argon writes a ghost story and four riddles, each pointing to a different real object and each rewarding one digit of the door code.
-5. **Verify.** The game is checked before anyone plays it (see below).
+1. **Scan.** The organiser uploads a few photos of the room and sets up the event: number of players, teams, time limit and scare level.
+2. **Understand.** Gemini 4 Argon lists every visible object with its colour, its position next to a landmark, a bounding box, and whether it is portable, safe and shared.
+3. **Filter.** Personal belongings (bags, earbuds, someone's coffee), fixed equipment and unsafe items are left out automatically. **Players are never asked to touch other people's things.**
+4. **Design.** Argon writes a ghost story and four riddles. Each riddle points to a different real object and unlocks one digit of the door code.
+5. **Verify.** The game is tested before anyone plays it (see below).
 6. **Approve.** A human organiser presses *Approve*. Only then does the game start.
-7. **Play.** The live ghost hosts the game, players hold up real objects to the webcam, and every correct find reveals a digit.
+7. **Play.** The live ghost hosts the game. Players hold real objects up to the webcam, and every correct find reveals a digit.
 
 ---
 
 ## Verification: we don't just hope it works
 
-AI-generated games break. Roomgeist checks every game in two layers before a human approves it.
+AI-generated games break. Roomgeist tests every game in two layers before a human approves it.
 
-| Layer | How | Catches |
+| Layer | How | What it catches |
 |---|---|---|
-| **1. Rule check** | Deterministic code, no AI | The door code doesn't match the puzzle digits (**"UNESCAPABLE: this game can never be won"**), a target that isn't in the room, an object used twice, a clue that gives away the answer |
-| **2. AI playtesters** | 3 × Gemini 3.8 Flash, run in parallel. Each sees **only the clue and the object list, never the answer** | Ambiguous clues (players pick different objects) and clues that are too hard |
-| **Auto-fix** | Gemini 4 Argon rewrites only what failed, then everything is re-checked (max 3 rounds) | |
+| **1. Rule check** | Plain code, no AI | A door code that doesn't match the puzzle digits (**"UNESCAPABLE: this game can never be won"**), a target that isn't in the room, an object used twice, a clue that gives the answer away |
+| **2. AI playtesters** | 3 × Gemini 3.8 Flash in parallel. Each one sees **only the clue and the object list, never the answer** | Ambiguous clues (playtesters pick different objects) and clues that are too hard |
+| **Auto-fix** | Gemini 4 Argon rewrites only the parts that failed, then everything is tested again (up to 3 rounds) | |
 | **Human approval** | The organiser approves the final game | |
 
 The three playtester personas make sure every clue works for everyone in the room:
@@ -99,23 +130,23 @@ The three playtester personas make sure every clue works for everyone in the roo
 - 🌍 **Non-native speaker**: may miss idioms and wordplay
 - 🧒 **10-year-old**: knows simple words and obvious colours and shapes
 
-A planted **broken demo level** (`GET /api/broken-game`) shows the whole loop. It has an ambiguous "something red as blood" clue in a room with two red objects, plus a door code that can never be reached. Both problems are caught, fixed and re-verified.
+A planted **broken demo level** (`GET /api/broken-game`) shows the whole loop. Its clue "something red as blood" fits two red objects in the room, and its door code can never be reached. Both problems are caught, fixed and checked again.
 
 ---
 
 ## The live ghost
 
-The ghost is a **Gemini 3.8 Live** session running in the browser with the microphone and webcam (1 frame per second).
+The ghost is a **Gemini 3.8 Live** session that runs in the browser and uses the microphone and webcam (1 frame per second).
 
-**The ghost never decides whether an answer is right.** It sees the list of objects in the room but not which one is the answer. When a player holds something up, it only reports what it sees by calling a tool. Our deterministic game code decides, then tells the ghost what to say next. This means the ghost can't be talked into letting players win, and it can't leak the solution.
+**The ghost never decides whether an answer is right.** It knows which objects are in the room, but not which one is the answer. When a player holds something up, the ghost only reports what it sees by calling a tool. Our own game code makes the decision and tells the ghost what to say next. So nobody can talk the ghost into letting them win, and the ghost can't give away the solution.
 
 | Tool | Called when | Decided by |
 |---|---|---|
-| `confirm_object_shown(object_id)` | A player holds an object up to the camera | `gameState.ts` |
-| `check_code(code)` | Players speak the door code | `gameState.ts` |
-| `request_hint()` | Players ask for help or seem stuck | `gameState.ts` (two-level hint ladder) |
+| `confirm_object_shown(object_id)` | A player holds an object up to the camera | `src/gameState.ts` |
+| `check_code(code)` | Players say the door code | `src/gameState.ts` |
+| `request_hint()` | Players ask for help or seem stuck | `src/gameState.ts` (two-step hints) |
 
-If the camera misreads an object, an **organiser override** lets a human confirm it manually, so a human always stays in control.
+If the camera misreads an object, the **organiser override** lets a person confirm it by hand, so a human always stays in control.
 
 ---
 
@@ -134,19 +165,25 @@ If the camera misreads an object, an **organiser override** lets a human confirm
 
 ```
 .
-├── server.ts                 # Express server + API routes (Gemini is called server-side)
-├── gameGenerator.ts          # Stage 1: room → objects → filter → puzzles → rule check
-├── verifier.ts               # Stage 2: AI playtesters + Argon auto-fix loop + broken demo level
-├── gameState.ts              # Deterministic game state machine (right/wrong, hints, door code)
-├── ghostLive.ts              # Stage 4: Gemini Live session (mic, webcam, voice, tool calls)
-├── GhostPanel.tsx            # Webcam, ghost captions, code digits, organiser override
+├── server.ts                  # Express server and API routes (all Gemini calls run on the server)
+├── gameGenerator.ts           # Room → objects → filter → puzzles → rule check
+├── verifier.ts                # AI playtesters, Argon auto-fix loop, broken demo level
 └── src/
-    ├── App.tsx               # Page flow and shared game state
+    ├── App.tsx                # Page flow and shared game state
+    ├── gameState.ts           # Game logic: right/wrong answers, hints, door code
+    ├── ghostLive.ts           # Gemini Live session (mic, webcam, voice, tool calls)
+    ├── GhostPanel.tsx         # Webcam, ghost captions, code digits, organiser override
     ├── components/
-    │   ├── VerificationScreen.tsx   # Checklist, playtester cards, fix history, approve button
-    │   └── RoomScene.tsx            # Haunted room scene, synced to the game state
+    │   ├── VerificationScreen.tsx   # Checklist, playtester cards, fix history, Approve button
+    │   ├── RoomScene.tsx            # Haunted room scene, kept in sync with the game state
+    │   ├── ThreeViewport.tsx        # 3D view of the haunted room
+    │   ├── UploadModal.tsx          # Room photo upload
+    │   └── CameraVerifyModal.tsx    # Webcam check for real-world objects
+    ├── hooks/
+    │   └── useEscapeGameState.ts
     └── utils/
-        └── escapeData.ts     # Shared types, sample room data, demo data
+        ├── escapeData.ts      # Shared types, sample room data, demo data
+        └── sampleRooms.ts     # Built-in sample rooms
 ```
 
 ---
@@ -155,12 +192,14 @@ If the camera misreads an object, an **organiser override** lets a human confirm
 
 | Method | Route | Description |
 |---|---|---|
-| `POST` | `/api/generate-game` | Body: `{ media: [{ mimeType, base64 }], event, approvedIds?, mock? }`. Returns inventory, usable / rejected objects, game and rule check. |
+| `POST` | `/api/analyze-room` | Body: `{ images: [{ imageBase64, mimeType }] }`. Analyses room photos and returns the objects and layout used to build the haunted room. |
+| `POST` | `/api/generate-game` | Body: `{ media: [{ mimeType, base64 }], event, approvedIds?, mock? }`. Returns the inventory, usable and rejected objects, the game and the rule check. |
 | `POST` | `/api/verify` | Body: `{ game, usable_objects, mock? }`. Runs verification and auto-fix. Returns `{ final_game, passed, history }`. |
+| `POST` | `/api/verify-object` | Body: `{ imageBase64, mimeType, expectedObject, puzzleClue }`. Checks a webcam frame against the expected object. |
 | `GET` | `/api/broken-game` | Returns the planted broken level for the demo. |
 | `POST` | `/api/live-token` | Returns a short-lived token so the browser can open a Gemini Live session. **The API key never leaves the server.** |
 
-Shared data format (field names are fixed across all modules):
+Shared data format (field names are the same in every module):
 
 ```jsonc
 {
@@ -187,34 +226,26 @@ Shared data format (field names are fixed across all modules):
 
 ---
 
-## Getting started
+## Run it locally
 
-**Requirements:** Node.js 20+, a Gemini API key, and a browser with a webcam and microphone (Chrome recommended; the page must be served over `https` or `localhost`).
+You don't need to do this to judge the project: the [live demo](https://ai.studio/apps/adbd89f1-cf72-4101-b836-68a29c6cba52) is the easiest way to try it.
+
+**Requirements:** Node.js 20+, a Gemini API key, and Chrome with a webcam and microphone. The page must be served over `https` or from `localhost`.
 
 ```bash
 # 1. Install dependencies
 npm install
 
-# 2. Add your API key
+# 2. Add your API key (see .env.example)
 echo 'GEMINI_API_KEY="your-key-here"' > .env
 
 # 3. Start the server (Express + Vite on http://localhost:3000)
-npx tsx server.ts
+npm run dev
 ```
 
-> If you run the project in **Google AI Studio Build**, set `GEMINI_API_KEY` in the **Secrets** panel instead of a `.env` file. Never commit your key.
+> In **Google AI Studio Build**, set `GEMINI_API_KEY` in the **Secrets** panel instead of a `.env` file. Never commit your key.
 
-### Try it without an API key
-
-Turn on **Demo mode (offline)** in the app. Generation and verification then use built-in sample data, so you can walk through the whole flow, including the broken demo level.
-
-You can also test the core logic from the command line:
-
-```bash
-npx tsx gameGenerator.ts --mock   # inventory filter + rule check
-npx tsx verifier.ts --mock        # broken level → caught → fixed → passed
-npx tsx gameState.ts --test       # wrong object → hint → 4 puzzles → wrong code → escape
-```
+`/api/generate-game` and `/api/verify` also accept `"mock": true`, which uses built-in sample data instead of calling Gemini.
 
 ---
 
@@ -224,29 +255,35 @@ Built in one day, so here is an honest snapshot.
 
 | ✅ Working | 🚧 In progress |
 |---|---|
-| Room understanding and object filtering | Fully explorable 3D haunted world (WASD movement) |
+| Room understanding and object filtering | A fully explorable 3D haunted world |
 | Puzzle generation with rule check | A cursed counterpart for every real object (e.g. marker → quill) |
-| AI playtesters + Argon auto-fix + organiser approval | "Lift the curse" animations synced to real-world finds |
-| Deterministic game state machine | End-to-end testing of Live audio/video on deployed builds |
+| AI playtesters, Argon auto-fix and organiser approval | "Lift the curse" animations synced to real-world finds |
+| Game logic that decides every answer | Full testing of live audio and video on deployed builds |
 | Live ghost with tool calls and organiser override | |
-| Offline demo mode and broken demo level | |
+| Broken demo level | |
 
 ---
 
 ## Roadmap
 
-- **Investigate the haunted world:** players walk to the altar and open a spellbook to reveal the riddle, so the 3D space becomes part of the puzzle, not just the backdrop.
+- **Explore the haunted world:** players walk to the altar and open a spellbook to read the riddle, so the 3D space becomes part of the puzzle, not just the background.
 - **Every find changes the world:** hidden doors open and runes light up, unlocking the next area.
 - **More themes:** Gothic manor, abandoned asylum, and a kid-friendly pumpkin cottage.
-- **More puzzle types:** colour sequences, counting, and teamwork puzzles where two players must share what they see.
-- **An offline designer model:** every level that passes verification becomes training data for a small **Gemma** model that designs escape rooms on-device, so room photos never need to leave the phone.
+- **More puzzle types:** colour sequences, counting, and teamwork puzzles where two players have to share what they see.
+- **An on-device designer:** every level that passes verification becomes training data for a small **Gemma** model that designs escape rooms on the phone, so room photos never have to leave the device.
 
 ---
 
-## Team
+<div align="center">
+
+### 👻 Ready to escape?
+
+**[▶ Play Roomgeist](https://ai.studio/apps/adbd89f1-cf72-4101-b836-68a29c6cba52)**
 
 Built by **team Roomgeist** at the Halloween Hackathon with Google DeepMind, Imperial College London.
 
 <!-- Add team member names and GitHub handles here -->
 
 *Happy Halloween. 🎃*
+
+</div>
