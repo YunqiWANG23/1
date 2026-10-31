@@ -1,0 +1,6 @@
+{
+  "name": "Room2World 3D - AI Room to 3D Environment Generator",
+  "description": "Transform photos of indoor spaces into interactive, walkable 3D environments with third-person character controls powered by Gemini vision.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

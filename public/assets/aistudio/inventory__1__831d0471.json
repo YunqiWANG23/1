@@ -1,0 +1,413 @@
+{
+  "room_summary": "A large tiered university lecture theatre with blue upholstered seating, a central AV podium at the front, a whiteboard, and projection screens.",
+  "landmarks": [
+    "the central AV podium",
+    "the whiteboard",
+    "the large projection screen",
+    "the Halloween at Imperial roll-up banner",
+    "the front-row long desks",
+    "the tiered blue lecture seats",
+    "the blue double exit doors"
+  ],
+  "objects": [
+    {
+      "id": "haribo_tub_top",
+      "name": "Haribo candy tub",
+      "color": "blue and green",
+      "location": "on top of the central AV podium, stacked on another tub",
+      "portable": true,
+      "camera_distinct": 5,
+      "owner": "shared",
+      "safe": true,
+      "image_ref": {
+        "photo_index": 4,
+        "box_2d": [
+          335,
+          398,
+          412,
+          485
+        ]
+      }
+    },
+    {
+      "id": "paper_plates_stack",
+      "name": "stack of paper plates",
+      "color": "white",
+      "location": "on the central AV podium, next to the Haribo tubs",
+      "portable": true,
+      "camera_distinct": 4,
+      "owner": "shared",
+      "safe": true,
+      "image_ref": {
+        "photo_index": 4,
+        "box_2d": [
+          390,
+          480,
+          432,
+          595
+        ]
+      }
+    },
+    {
+      "id": "plastic_cups_sleeve",
+      "name": "sleeve of disposable cups",
+      "color": "black and green",
+      "location": "resting horizontally on top of the stack of paper plates on the podium",
+      "portable": true,
+      "camera_distinct": 4,
+      "owner": "shared",
+      "safe": true,
+      "image_ref": {
+        "photo_index": 4,
+        "box_2d": [
+          375,
+          485,
+          400,
+          585
+        ]
+      }
+    },
+    {
+      "id": "glass_swing_top_bottle",
+      "name": "swing-top glass water bottle",
+      "color": "clear",
+      "location": "on the central AV podium, near the gooseneck microphone",
+      "portable": true,
+      "camera_distinct": 4,
+      "owner": "shared",
+      "safe": false,
+      "image_ref": {
+        "photo_index": 5,
+        "box_2d": [
+          530,
+          695,
+          665,
+          775
+        ]
+      }
+    },
+    {
+      "id": "pret_coffee_cup",
+      "name": "Pret disposable coffee cup",
+      "color": "white and burgundy",
+      "location": "on the central AV podium, between the glass bottle and plastic water bottle",
+      "portable": true,
+      "camera_distinct": 4,
+      "owner": "personal",
+      "safe": true,
+      "image_ref": {
+        "photo_index": 4,
+        "box_2d": [
+          355,
+          310,
+          388,
+          345
+        ]
+      }
+    },
+    {
+      "id": "small_water_bottle_podium",
+      "name": "small plastic water bottle",
+      "color": "clear and blue",
+      "location": "on the edge of the central AV podium, next to the Pret coffee cup",
+      "portable": true,
+      "camera_distinct": 4,
+      "owner": "shared",
+      "safe": true,
+      "image_ref": {
+        "photo_index": 5,
+        "box_2d": [
+          530,
+          768,
+          602,
+          815
+        ]
+      }
+    },
+    {
+      "id": "red_whiteboard_marker",
+      "name": "red marker pen",
+      "color": "red and white",
+      "location": "lying flat on the central AV podium between the keyboard and the coffee cup",
+      "portable": true,
+      "camera_distinct": 4,
+      "owner": "shared",
+      "safe": true,
+      "image_ref": {
+        "photo_index": 5,
+        "box_2d": [
+          550,
+          565,
+          562,
+          630
+        ]
+      }
+    },
+    {
+      "id": "podium_keyboard",
+      "name": "wired computer keyboard",
+      "color": "black",
+      "location": "on the central AV podium, beneath the dual monitors",
+      "portable": false,
+      "camera_distinct": 4,
+      "owner": "shared",
+      "safe": false,
+      "image_ref": {
+        "photo_index": 5,
+        "box_2d": [
+          538,
+          418,
+          586,
+          612
+        ]
+      }
+    },
+    {
+      "id": "gooseneck_microphone",
+      "name": "gooseneck desk microphone",
+      "color": "black",
+      "location": "on the right side of the central AV podium",
+      "portable": false,
+      "camera_distinct": 4,
+      "owner": "shared",
+      "safe": false,
+      "image_ref": {
+        "photo_index": 5,
+        "box_2d": [
+          468,
+          562,
+          656,
+          622
+        ]
+      }
+    },
+    {
+      "id": "pepsi_max_multipack",
+      "name": "multipack of Pepsi Max cans",
+      "color": "black and blue",
+      "location": "on the floor directly in front of the central AV podium",
+      "portable": true,
+      "camera_distinct": 5,
+      "owner": "shared",
+      "safe": true,
+      "image_ref": {
+        "photo_index": 4,
+        "box_2d": [
+          592,
+          235,
+          732,
+          466
+        ]
+      }
+    },
+    {
+      "id": "water_bottles_multipack",
+      "name": "shrink-wrapped pack of water bottles",
+      "color": "pink and clear",
+      "location": "stacked on the floor against the front of the central AV podium",
+      "portable": true,
+      "camera_distinct": 4,
+      "owner": "shared",
+      "safe": true,
+      "image_ref": {
+        "photo_index": 4,
+        "box_2d": [
+          512,
+          310,
+          672,
+          604
+        ]
+      }
+    },
+    {
+      "id": "cardboard_box_under_podium",
+      "name": "brown cardboard box",
+      "color": "brown",
+      "location": "on the floor under the left side of the central AV podium",
+      "portable": true,
+      "camera_distinct": 3,
+      "owner": "shared",
+      "safe": true,
+      "image_ref": {
+        "photo_index": 4,
+        "box_2d": [
+          446,
+          124,
+          512,
+          266
+        ]
+      }
+    },
+    {
+      "id": "white_paper_carrier_bag",
+      "name": "white paper gift bag",
+      "color": "white",
+      "location": "resting on the black box on top of the brown cardboard box under the podium",
+      "portable": true,
+      "camera_distinct": 4,
+      "owner": "shared",
+      "safe": true,
+      "image_ref": {
+        "photo_index": 4,
+        "box_2d": [
+          396,
+          162,
+          444,
+          255
+        ]
+      }
+    },
+    {
+      "id": "halloween_rollup_banner",
+      "name": "Halloween at Imperial roll-up banner",
+      "color": "black and orange",
+      "location": "standing on the floor between the whiteboard and the central AV podium",
+      "portable": false,
+      "camera_distinct": 5,
+      "owner": "shared",
+      "safe": false,
+      "image_ref": {
+        "photo_index": 0,
+        "box_2d": [
+          388,
+          326,
+          816,
+          462
+        ]
+      }
+    },
+    {
+      "id": "white_backpack_floor",
+      "name": "white backpack",
+      "color": "white",
+      "location": "on the carpet in front of the right-side front-row desk",
+      "portable": true,
+      "camera_distinct": 5,
+      "owner": "personal",
+      "safe": true,
+      "image_ref": {
+        "photo_index": 2,
+        "box_2d": [
+          705,
+          518,
+          812,
+          650
+        ]
+      }
+    },
+    {
+      "id": "coconut_water_carton",
+      "name": "tall drink carton",
+      "color": "blue and white",
+      "location": "standing on the right-side front-row desk",
+      "portable": true,
+      "camera_distinct": 5,
+      "owner": "personal",
+      "safe": true,
+      "image_ref": {
+        "photo_index": 2,
+        "box_2d": [
+          558,
+          630,
+          604,
+          658
+        ]
+      }
+    },
+    {
+      "id": "tan_backpack_desk",
+      "name": "tan and black backpack",
+      "color": "tan",
+      "location": "resting on the right end of the right-side front-row desk",
+      "portable": true,
+      "camera_distinct": 4,
+      "owner": "personal",
+      "safe": true,
+      "image_ref": {
+        "photo_index": 2,
+        "box_2d": [
+          574,
+          782,
+          634,
+          940
+        ]
+      }
+    },
+    {
+      "id": "navy_tote_bag",
+      "name": "navy shoulder bag with brown straps",
+      "color": "navy blue and brown",
+      "location": "on the left end of the right-side front-row desk",
+      "portable": true,
+      "camera_distinct": 4,
+      "owner": "personal",
+      "safe": true,
+      "image_ref": {
+        "photo_index": 2,
+        "box_2d": [
+          562,
+          372,
+          618,
+          485
+        ]
+      }
+    },
+    {
+      "id": "pink_pouch",
+      "name": "small pink zip pouch",
+      "color": "pink",
+      "location": "on the left end of the right-side front-row desk, next to the navy shoulder bag",
+      "portable": true,
+      "camera_distinct": 4,
+      "owner": "personal",
+      "safe": true,
+      "image_ref": {
+        "photo_index": 2,
+        "box_2d": [
+          570,
+          352,
+          588,
+          384
+        ]
+      }
+    },
+    {
+      "id": "earbuds_charging_case",
+      "name": "small black earbuds case",
+      "color": "black",
+      "location": "on the right-side front-row desk, to the right of the blue drink carton",
+      "portable": true,
+      "camera_distinct": 3,
+      "owner": "personal",
+      "safe": true,
+      "image_ref": {
+        "photo_index": 2,
+        "box_2d": [
+          594,
+          670,
+          605,
+          696
+        ]
+      }
+    },
+    {
+      "id": "orange_chair",
+      "name": "orange lecture chair",
+      "color": "orange",
+      "location": "behind the podium near the whiteboard",
+      "portable": false,
+      "camera_distinct": 4,
+      "owner": "shared",
+      "safe": false,
+      "image_ref": {
+        "photo_index": 5,
+        "box_2d": [
+          484,
+          926,
+          582,
+          1000
+        ]
+      }
+    }
+  ]
+}

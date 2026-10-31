@@ -1,0 +1,56 @@
+{
+  "title": "The Phantom Lecture of Imperial Hall",
+  "intro": "Welcome, brave scholars! Organiser Alex has accidentally awakened the mischievous Poltergeist of the Podium, trapping all 20 of you across your 4 teams inside this lecture theatre. You have just 15 minutes before the ghost locks the blue exit doors forever—solve these four spooky riddles by holding each cursed item up to the webcam to claim the four-digit banishing code!",
+  "puzzles": [
+    {
+      "id": "p1",
+      "clue": "I bleed crimson ink upon the great pale wall, yet I have no veins at all. Dressed in scarlet and bone-white, I rest flat upon the lecturer's silver altar between clacking keys and a warm brew.",
+      "solve_by": "show_object",
+      "target": "red_whiteboard_marker",
+      "reward_digit": "4",
+      "hints": [
+        "Search the flat surface of the central AV podium near the keyboard.",
+        "Pick up the small red-and-white writing tool lying between the keyboard and the coffee cup."
+      ],
+      "why_it_works": "It is lightweight, safe, and easy to hold up to the webcam, with a bright red cap and barrel that make it visually distinct from every other object."
+    },
+    {
+      "id": "p2",
+      "clue": "Twin round cauldrons of sapphire and emerald sit stacked upon the speaker's shrine. Inside my plastic belly, tiny gelatinous beasts and gummy ghouls await a sweet tooth—bring the upper vessel to the eye!",
+      "solve_by": "show_object",
+      "target": "haribo_tub_top",
+      "reward_digit": "9",
+      "hints": [
+        "Look on the central AV podium for two colourful round containers stacked together.",
+        "Grab the top blue-and-green plastic container of chewy sweets from the podium."
+      ],
+      "why_it_works": "The bright blue and green cylindrical container is large, colorful, completely safe to lift, and unmistakably recognizable on camera."
+    },
+    {
+      "id": "p3",
+      "clue": "A tower of pale full moons rests beside the sweet cauldrons on the silver desk. We are flat, ghostly white circles waiting for a midnight feast, currently bearing a dark green cylinder upon our backs.",
+      "solve_by": "show_object",
+      "target": "paper_plates_stack",
+      "reward_digit": "2",
+      "hints": [
+        "Check the central AV podium right next to the stacked sweet containers.",
+        "Lift the stack of round white disposable tableware sitting under the sleeve of cups."
+      ],
+      "why_it_works": "Its bright white circular profile and ribbed stack texture contrast sharply with the colourful tub and thin red pen."
+    },
+    {
+      "id": "p4",
+      "clue": "Crouching on the grey carpet right at the foot of the metal shrine, this dark shroud of midnight black and electric blue holds a fizzy, sugar-free potion trapped in cold aluminum tombs.",
+      "solve_by": "show_object",
+      "target": "pepsi_max_multipack",
+      "reward_digit": "7",
+      "hints": [
+        "Look down on the floor directly in front of the central AV podium, beside the pink-wrapped water.",
+        "Pick up the black-and-blue wrapped pack of dark fizzy drink cans from the carpet."
+      ],
+      "why_it_works": "Located on the floor in front of the podium, its bold black-and-blue branding and boxy shape make it distinct from the podium tabletop items and easy to recognise on a webcam."
+    }
+  ],
+  "final_code": "4927",
+  "outro": "With the final digit entered—4-9-2-7—the projection screen flickers and the Poltergeist of the Podium vanishes in a puff of phantom chalk dust! Congratulations to all 4 teams, and thank you to Alex for guiding our 20 investigators to freedom with time to spare!"
+}
