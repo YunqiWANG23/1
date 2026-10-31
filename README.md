@@ -60,6 +60,8 @@ Track 2: Multimodal & Human-Centric AI.
 
 ## The problem
 
+![Meet Alex. Tonight she hosts Halloween for twenty strangers.](docs/images/problem.png)
+
 Alex runs events for an international student society. Tonight she's hosting Halloween for **20 freshers who have never met**, in a **borrowed lecture theatre**, and their levels of English are very different.
 
 | Problem | Why the usual options fail |
@@ -73,6 +75,8 @@ So our puzzles are **easy on purpose**. Alex doesn't need a game that beats peop
 ---
 
 ## Two superpowers
+
+![Hide the clues in a parallel world, so you never have to touch the real room.](docs/images/superpowers.png)
 
 | | 🔮 **Imagine** | 👁️ **Perceive** |
 |---|---|---|
